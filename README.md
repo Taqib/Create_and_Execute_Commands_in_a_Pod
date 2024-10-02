@@ -43,3 +43,16 @@ To verify that the pod has been created and is running:
 --"kubectl get pod"
 
 We should see the my-nginx pod in the list with the status Running.
+
+
+Execute a Command Inside the Pod
+To execute a command inside the running my-nginx pod, use the kubectl exec command. For example, to open a shell inside the pod:
+--"kubectl exec -it my-nginx -- /bin/sh"
+
+Here, kubectl exec -it my-nginx executes a command in the my-nginx pod.
+
+-- /bin/sh opens a shell inside the container
+
+Inside the shell, we can run commands to interact with the pod. For instance, we can list files, check the Nginx version, or inspect running processes. For example, to check the Nginx version:
+-- nginx -v
+
